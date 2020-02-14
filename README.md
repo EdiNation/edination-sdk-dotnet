@@ -173,7 +173,7 @@ Task<Stream> Write(
 | postfix |  ``` Optional ```  | The postfix to be applied at the end of each segment, just after the segment separator. This is usually a carriage return (CR), line feed (LF) or both. By default, there is no postfix. |
 | sameRepetionAndDataElement |  ``` Optional ```  ``` DefaultValue ```  | Sometimes the same delimiter is used to denote data element separator and repetition separator as in IATA transactions. By default, this is false. |
 | eancomS3 |  ``` Optional ```  ``` DefaultValue ```  | The default syntax for EANCOM transactions. By default all EANCOM transactions will be translated and validated according to the rules of Syntax 4. Set this flag to true if you need Syntax 3 to be used. |
-| contentType |  ``` Optional ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| contentType |  ``` Optional ```  ``` DefaultValue ```  | application/json |
 | body |  ``` Optional ```  | The EdifactInterchange object to translate to raw EDIFACT. |
 
 
