@@ -5,3 +5,4 @@
 /.vs/EdiNationAPI/v16/Server/sqlite3
 /.vs/EdiNationAPI/v16
 /EdiNationAPI.Standard/obj
+/EdiNationAPI.Standard/bin/Debug/netstandard1.3

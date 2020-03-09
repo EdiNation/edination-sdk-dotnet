@@ -22,7 +22,7 @@ namespace EdiNationAPI.Standard.Models
     {
         // These fields hold the values for the public properties.
         private Models.UNG uNG;
-        private object transactions;
+        private List<object> transactions;
         private List<Models.UNE> uNETrailers;
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace EdiNationAPI.Standard.Models
         /// TODO: Write general description for this method
         /// </summary>
         [JsonProperty("Transactions")]
-        public object Transactions 
+        public List<object> Transactions 
         { 
             get 
             {
