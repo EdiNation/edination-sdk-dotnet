@@ -220,20 +220,20 @@ namespace EdiNationAPI.Standard.Http.Client
                         else
                             requestMessage.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                     }
-                    else if (request.Headers.Any(f => f.Key == "content-type" && f.Value == "application/json; charset=utf-8"))
+                    else if (request.Headers.Any(f => f.Key == "Content-Type" && f.Value == "application/json; charset=utf-8"))
                         requestMessage.Content = new StringContent((string)request.Body ?? string.Empty, Encoding.UTF8,
                             "application/json");
-                    else if (request.Headers.ContainsKey("content-type"))
+                    else if (request.Headers.ContainsKey("Content-Type"))
                     {
                         requestMessage.Content = new ByteArrayContent(
                             request.Body == null ? new byte[] { } : Encoding.UTF8.GetBytes((string)request.Body));
 
                         try
                         {
-                            requestMessage.Content.Headers.ContentType = MediaTypeHeaderValue.Parse(request.Headers["content-type"]);
+                            requestMessage.Content.Headers.ContentType = MediaTypeHeaderValue.Parse(request.Headers["Content-Type"]);
                         } catch(Exception)
                         {
-                            requestMessage.Content.Headers.TryAddWithoutValidation("content-type", request.Headers["content-type"]);
+                            requestMessage.Content.Headers.TryAddWithoutValidation("content-type", request.Headers["Content-Type"]);
                         }
                     }
                     else
